@@ -1,0 +1,164 @@
+Cmp-Mod V01 Created by Cvpcb (2014-10-22 BZR 5214)-product   date = Fri 09 Oct 2015 02:40:59 PM EDT
+
+BeginCmp
+TimeStamp = /5617E158;
+Reference = C1;
+ValeurCmp = 4.7u;
+IdModule  = Capacitors_SMD:C_1206_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E171;
+Reference = C2;
+ValeurCmp = 0.47u;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E0BA;
+Reference = C3;
+ValeurCmp = 10u;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E1DC;
+Reference = C4;
+ValeurCmp = 100p;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E131;
+Reference = C5;
+ValeurCmp = 0.1u;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E221;
+Reference = C6;
+ValeurCmp = 10u;
+IdModule  = Capacitors_SMD:C_1206_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E075;
+Reference = CON1;
+ValeurCmp = Power In;
+IdModule  = Connect:JACK_ALIM;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E3BD;
+Reference = D1;
+ValeurCmp = 5V;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E418;
+Reference = D2;
+ValeurCmp = 3.3V;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E43D;
+Reference = D3;
+ValeurCmp = -5V;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E458;
+Reference = D4;
+ValeurCmp = 20V;
+IdModule  = Diodes_SMD:SOD-123;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E4AD;
+Reference = L1;
+ValeurCmp = 10u;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /56180998;
+Reference = L2;
+ValeurCmp = 10u;
+IdModule  = Capacitors_SMD:C_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E693;
+Reference = P1;
+ValeurCmp = Power Out;
+IdModule  = AB1lib:4pinTerminal;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E52D;
+Reference = P2;
+ValeurCmp = Power Out;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E23A;
+Reference = R1;
+ValeurCmp = 470;
+IdModule  = Resistors_SMD:R_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E323;
+Reference = R2;
+ValeurCmp = 330;
+IdModule  = Resistors_SMD:R_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E3A4;
+Reference = R3;
+ValeurCmp = 470;
+IdModule  = Resistors_SMD:R_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /561808FC;
+Reference = R4;
+ValeurCmp = 73.2;
+IdModule  = Resistors_SMD:R_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /561806F4;
+Reference = R5;
+ValeurCmp = 24.9;
+IdModule  = Resistors_SMD:R_0805_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /56183508;
+Reference = SW1;
+ValeurCmp = Power;
+IdModule  = AB1lib:PVA2EE;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E04C;
+Reference = U1;
+ValeurCmp = LT1617;
+IdModule  = Housings_SOT-23_SOT-143_TSOT-6:SOT-23-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617E01F;
+Reference = U2;
+ValeurCmp = LD1117DT33;
+IdModule  = AB1lib:DPAK;
+EndCmp
+
+EndListe
