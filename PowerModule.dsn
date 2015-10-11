@@ -83,9 +83,6 @@
     (component AB1lib:DPAK
       (place U2 169340 -111330 front 180 (PN LD1117DT33))
     )
-    (component AB1lib:4pinTerminal
-      (place P1 184000 -118000 front 270 (PN "Power Out"))
-    )
     (component AB1lib:PVA2EE
       (place SW1 158000 -124000 front 0 (PN Power))
     )
@@ -94,6 +91,9 @@
       (place REF2 154000 -103000 front 0 (PN "MountingHole_3-5mm"))
       (place REF4 186000 -147000 front 0 (PN "MountingHole_3-5mm"))
       (place REF3 154000 -147000 front 0 (PN "MountingHole_3-5mm"))
+    )
+    (component AB1lib:4pinTerminal
+      (place P1 184000 -118000 front 270 (PN "Power Out"))
     )
   )
   (library
@@ -202,20 +202,6 @@
       (pin Rect[T]Pad_1600x3000_um 3 2300 -3300)
       (pin Rect[T]Pad_6700x6700_um 2 0 3350)
     )
-    (image AB1lib:4pinTerminal
-      (outline (path signal 150  6100 2800  8100 2800))
-      (outline (path signal 150  1400 2800  3400 2800))
-      (outline (path signal 150  -3400 2800  -1400 2800))
-      (outline (path signal 150  -8100 2800  -6100 2800))
-      (outline (path signal 150  9600 3000  9600 -4000))
-      (outline (path signal 150  -9600 3000  -9600 -4000))
-      (outline (path signal 150  -9600 3000  9600 3000))
-      (outline (path signal 150  -9600 -4000  9600 -4000))
-      (pin Round[A]Pad_2540_um 3 2381.25 0)
-      (pin Round[A]Pad_2540_um 2 -2381.25 0)
-      (pin Round[A]Pad_2540_um 1 -7143.75 0)
-      (pin Round[A]Pad_2540_um 4 7143.75 0)
-    )
     (image AB1lib:PVA2EE
       (outline (path signal 150  -4900 4600  -4900 -4600))
       (outline (path signal 150  4900 4600  4900 -4600))
@@ -236,6 +222,20 @@
             1081.56 3328.7  2057.25 2831.56  2831.56 2057.25  3328.7 1081.56))
       (keepout "" (circle F.Cu 3500))
       (keepout "" (circle In1.Cu 3500))
+    )
+    (image AB1lib:4pinTerminal
+      (outline (path signal 150  6100 2800  8100 2800))
+      (outline (path signal 150  1400 2800  3400 2800))
+      (outline (path signal 150  -3400 2800  -1400 2800))
+      (outline (path signal 150  -8100 2800  -6100 2800))
+      (outline (path signal 150  10000 3000  10000 -4000))
+      (outline (path signal 150  -10000 3000  -10000 -4000))
+      (outline (path signal 150  -10000 3000  10000 3000))
+      (outline (path signal 150  -10000 -4000  10000 -4000))
+      (pin Round[A]Pad_2540_um 3 2500 0)
+      (pin Round[A]Pad_2540_um 2 -2500 0)
+      (pin Round[A]Pad_2540_um 1 -7500 0)
+      (pin Round[A]Pad_2540_um 4 7500 0)
     )
     (padstack Round[A]Pad_1800_um
       (shape (circle F.Cu 1800))
@@ -303,11 +303,11 @@
   )
   (network
     (net +5V
-      (pins C1-1 C3-1 L1-1 P2-1 P2-2 R1-1 U1-4 U1-5 U2-3 P1-1 SW1-2)
+      (pins C1-1 C3-1 L1-1 P2-1 P2-2 R1-1 U1-4 U1-5 U2-3 SW1-2 P1-1)
     )
     (net GND
       (pins C1-2 C3-2 C5-2 C6-2 CON1-2 D1-2 D2-2 D3-1 D4-2 P2-5 P2-6 R5-2 U1-2 U2-1
-        P1-3 C7-2)
+        C7-2 P1-3)
     )
     (net "Net-(C2-Pad1)"
       (pins C2-1 D4-1 L2-1)
@@ -322,7 +322,7 @@
       (pins C4-2 R4-2 R5-1 U1-3)
     )
     (net +3.3V
-      (pins C5-1 P2-3 P2-4 R2-1 U2-2 P1-2 C7-1)
+      (pins C5-1 P2-3 P2-4 R2-1 U2-2 C7-1 P1-2)
     )
     (net "Net-(CON1-Pad1)"
       (pins CON1-1 SW1-1)
