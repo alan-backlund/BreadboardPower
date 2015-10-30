@@ -9,15 +9,12 @@ cp -f $WD-B_SilkS.gbr $WD.GBO
 cp -f $WD-F_Cu.gbr $WD.GTL
 
 cp -f $WD.drl $WD.TXT
+cp -f $WD.drl $WD.XLN
 cp -f $WD-Edge_Cuts.gbr $WD.GML
 cp -f $WD-Edge_Cuts.gbr $WD.GKO
 
 rm -f $WD.ZIP
 zip $WD.ZIP $WD.GBS $WD.GML $WD.GTS $WD.GTO $WD.GBL $WD.GBO $WD.GTL $WD.TXT $WD.GKO
 
-
-
-
-
-
-
+rm -f $WD-OSH.ZIP
+zip $WD-OSH.ZIP $WD.GTL $WD.GBL $WD.GTS $WD.GBS $WD.GTO $WD.GBO $WD.GKO $WD.XLN

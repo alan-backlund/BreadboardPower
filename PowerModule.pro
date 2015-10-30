@@ -1,4 +1,4 @@
-update=Fri 09 Oct 2015 11:41:02 AM EDT
+update=Sun 11 Oct 2015 11:13:17 AM EDT
 version=1
 last_client=kicad
 [cvpcb]
@@ -62,3 +62,15 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=/home/alan/Development/KiCad/library/AbAssort
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
