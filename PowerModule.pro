@@ -1,4 +1,4 @@
-update=Sun 11 Oct 2015 11:13:17 AM EDT
+update=Wed 27 Jan 2016 11:37:32 AM EST
 version=1
 last_client=kicad
 [cvpcb]
@@ -27,9 +27,19 @@ BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
-LibDir=
+LibDir=../PowerModule
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -61,16 +71,4 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=/home/alan/Development/KiCad/library/AbAssort
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
+LibName31=/home/alan/Tools/KiCad/library/AbAssort

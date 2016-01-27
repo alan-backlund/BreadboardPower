@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name AB1lib)(type KiCad)(uri /home/alan/Development/KiCad/library/AB1lib.pretty)(options "")(descr ""))
+  (lib (name AB1lib)(type KiCad)(uri "$(KIPRJMOD)/AB1lib.pretty")(options "")(descr ""))
 )

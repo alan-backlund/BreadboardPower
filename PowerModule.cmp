@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-22 BZR 5214)-product   date = Sun 11 Oct 2015 07:19:19 PM EDT
+Cmp-Mod V01 Created by Cvpcb (2014-10-22 BZR 5214)-product   date = Thu 10 Dec 2015 03:14:16 PM EST
 
 BeginCmp
 TimeStamp = /5617E158;
@@ -53,7 +53,7 @@ BeginCmp
 TimeStamp = /5617E075;
 Reference = CON1;
 ValeurCmp = Power In;
-IdModule  = AB1lib:JACK_ALIM;
+IdModule  = AB1lib:DC_PWR_JACK;
 EndCmp
 
 BeginCmp

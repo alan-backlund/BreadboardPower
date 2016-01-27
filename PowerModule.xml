@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/alan/Development/KiCad/PowerModule/PowerModule.sch</source>
-    <date>Fri 09 Oct 2015 08:04:04 PM EDT</date>
+    <date>Thu 10 Dec 2015 03:04:11 PM EST</date>
     <tool>Eeschema (2014-10-22 BZR 5214)-product</tool>
   </design>
   <components>
@@ -22,7 +22,7 @@
     </comp>
     <comp ref="CON1">
       <value>Power In</value>
-      <footprint>Connect:JACK_ALIM</footprint>
+      <footprint>AB1lib:DC_PWR_JACK</footprint>
       <libsource lib="conn" part="BARREL_JACK"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5617E075</tstamp>
@@ -176,56 +176,35 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="AbAssort" part="LD1117DT33">
-      <description>LD1117S33TR, 800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, DPAK</description>
-      <docs>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf</docs>
+    <libpart lib="device" part="C">
+      <description>Condensateur non polarise</description>
       <footprints>
-        <fp>DPAK</fp>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
       </footprints>
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value">LD1117DT33</field>
-        <field name="Footprint">DPAK</field>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
       </fields>
       <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="VO" type="power_out"/>
-        <pin num="3" name="VI" type="power_in"/>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AbAssort" part="LT1617">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">LT1617</field>
-      </fields>
-      <pins>
-        <pin num="1" name="SW" type="passive"/>
-        <pin num="2" name="GND" type="power_in"/>
-        <pin num="3" name="NFB" type="passive"/>
-        <pin num="4" name="SHDN" type="passive"/>
-        <pin num="5" name="VIN" type="power_in"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_02X04">
+    <libpart lib="device" part="DIODESCH">
+      <description>Diode schottky</description>
       <footprints>
-        <fp>Pin_Header_Straight_2X04</fp>
-        <fp>Pin_Header_Angled_2X04</fp>
-        <fp>Socket_Strip_Straight_2X04</fp>
-        <fp>Socket_Strip_Angled_2X04</fp>
+        <fp>D?</fp>
+        <fp>S*</fp>
       </footprints>
       <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_02X04</field>
+        <field name="Reference">D</field>
+        <field name="Value">DIODESCH</field>
       </fields>
       <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-        <pin num="5" name="P5" type="passive"/>
-        <pin num="6" name="P6" type="passive"/>
-        <pin num="7" name="P7" type="passive"/>
-        <pin num="8" name="P8" type="passive"/>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="device" part="INDUCTOR_SMALL">
@@ -286,37 +265,6 @@
         <pin num="2" name="2" type="input"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="C">
-      <description>Condensateur non polarise</description>
-      <footprints>
-        <fp>SM*</fp>
-        <fp>C?</fp>
-        <fp>C1-1</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="DIODESCH">
-      <description>Diode schottky</description>
-      <footprints>
-        <fp>D?</fp>
-        <fp>S*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">DIODESCH</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A" type="passive"/>
-        <pin num="2" name="K" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="conn" part="BARREL_JACK">
       <description>DC Barrel Jack</description>
       <fields>
@@ -347,16 +295,68 @@
         <pin num="4" name="P4" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="conn" part="CONN_02X04">
+      <footprints>
+        <fp>Pin_Header_Straight_2X04</fp>
+        <fp>Pin_Header_Angled_2X04</fp>
+        <fp>Socket_Strip_Straight_2X04</fp>
+        <fp>Socket_Strip_Angled_2X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_02X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="AbAssort" part="LD1117DT33">
+      <description>LD1117S33TR, 800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, DPAK</description>
+      <docs>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf</docs>
+      <footprints>
+        <fp>DPAK</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LD1117DT33</field>
+        <field name="Footprint">DPAK</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="AbAssort" part="LT1617">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LT1617</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SW" type="passive"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="NFB" type="passive"/>
+        <pin num="4" name="SHDN" type="passive"/>
+        <pin num="5" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="AbAssort">
-      <uri>/home/alan/Development/KiCad/library/AbAssort.lib</uri>
-    </library>
     <library logical="device">
       <uri>/usr/local/share/kicad/library/device.lib</uri>
     </library>
     <library logical="conn">
       <uri>/usr/local/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="AbAssort">
+      <uri>/home/alan/Development/KiCad/library/AbAssort.lib</uri>
     </library>
   </libraries>
   <nets>

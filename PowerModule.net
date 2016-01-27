@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/alan/Development/KiCad/PowerModule/PowerModule.sch)
-    (date "Fri 09 Oct 2015 08:04:14 PM EDT")
+    (date "Thu 10 Dec 2015 03:04:01 PM EST")
     (tool "Eeschema (2014-10-22 BZR 5214)-product"))
   (components
     (comp (ref U2)
@@ -18,7 +18,7 @@
       (tstamp 5617E04C))
     (comp (ref CON1)
       (value "Power In")
-      (footprint Connect:JACK_ALIM)
+      (footprint AB1lib:DC_PWR_JACK)
       (libsource (lib conn) (part BARREL_JACK))
       (sheetpath (names /) (tstamps /))
       (tstamp 5617E075))
@@ -149,47 +149,29 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 56185C9F)))
   (libparts
-    (libpart (lib AbAssort) (part LD1117DT33)
-      (description "LD1117S33TR, 800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, DPAK")
-      (docs http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf)
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
       (footprints
-        (fp DPAK))
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
       (fields
-        (field (name Reference) U)
-        (field (name Value) LD1117DT33)
-        (field (name Footprint) DPAK))
+        (field (name Reference) C)
+        (field (name Value) C))
       (pins
-        (pin (num 1) (name GND) (type power_in))
-        (pin (num 2) (name VO) (type power_out))
-        (pin (num 3) (name VI) (type power_in))))
-    (libpart (lib AbAssort) (part LT1617)
-      (fields
-        (field (name Reference) U)
-        (field (name Value) LT1617))
-      (pins
-        (pin (num 1) (name SW) (type passive))
-        (pin (num 2) (name GND) (type power_in))
-        (pin (num 3) (name NFB) (type passive))
-        (pin (num 4) (name SHDN) (type passive))
-        (pin (num 5) (name VIN) (type power_in))))
-    (libpart (lib conn) (part CONN_02X04)
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part DIODESCH)
+      (description "Diode schottky")
       (footprints
-        (fp Pin_Header_Straight_2X04)
-        (fp Pin_Header_Angled_2X04)
-        (fp Socket_Strip_Straight_2X04)
-        (fp Socket_Strip_Angled_2X04))
+        (fp D?)
+        (fp S*))
       (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_02X04))
+        (field (name Reference) D)
+        (field (name Value) DIODESCH))
       (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))
-        (pin (num 3) (name P3) (type passive))
-        (pin (num 4) (name P4) (type passive))
-        (pin (num 5) (name P5) (type passive))
-        (pin (num 6) (name P6) (type passive))
-        (pin (num 7) (name P7) (type passive))
-        (pin (num 8) (name P8) (type passive))))
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
     (libpart (lib device) (part INDUCTOR_SMALL)
       (fields
         (field (name Reference) L)
@@ -234,29 +216,6 @@
       (pins
         (pin (num 1) (name 1) (type input))
         (pin (num 2) (name 2) (type input))))
-    (libpart (lib device) (part C)
-      (description "Condensateur non polarise")
-      (footprints
-        (fp SM*)
-        (fp C?)
-        (fp C1-1))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) C))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part DIODESCH)
-      (description "Diode schottky")
-      (footprints
-        (fp D?)
-        (fp S*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) DIODESCH))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
     (libpart (lib conn) (part BARREL_JACK)
       (description "DC Barrel Jack")
       (fields
@@ -279,14 +238,55 @@
         (pin (num 1) (name P1) (type passive))
         (pin (num 2) (name P2) (type passive))
         (pin (num 3) (name P3) (type passive))
-        (pin (num 4) (name P4) (type passive)))))
+        (pin (num 4) (name P4) (type passive))))
+    (libpart (lib conn) (part CONN_02X04)
+      (footprints
+        (fp Pin_Header_Straight_2X04)
+        (fp Pin_Header_Angled_2X04)
+        (fp Socket_Strip_Straight_2X04)
+        (fp Socket_Strip_Angled_2X04))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_02X04))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))
+        (pin (num 3) (name P3) (type passive))
+        (pin (num 4) (name P4) (type passive))
+        (pin (num 5) (name P5) (type passive))
+        (pin (num 6) (name P6) (type passive))
+        (pin (num 7) (name P7) (type passive))
+        (pin (num 8) (name P8) (type passive))))
+    (libpart (lib AbAssort) (part LD1117DT33)
+      (description "LD1117S33TR, 800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, DPAK")
+      (docs http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf)
+      (footprints
+        (fp DPAK))
+      (fields
+        (field (name Reference) U)
+        (field (name Value) LD1117DT33)
+        (field (name Footprint) DPAK))
+      (pins
+        (pin (num 1) (name GND) (type power_in))
+        (pin (num 2) (name VO) (type power_out))
+        (pin (num 3) (name VI) (type power_in))))
+    (libpart (lib AbAssort) (part LT1617)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) LT1617))
+      (pins
+        (pin (num 1) (name SW) (type passive))
+        (pin (num 2) (name GND) (type power_in))
+        (pin (num 3) (name NFB) (type passive))
+        (pin (num 4) (name SHDN) (type passive))
+        (pin (num 5) (name VIN) (type power_in)))))
   (libraries
-    (library (logical AbAssort)
-      (uri /home/alan/Development/KiCad/library/AbAssort.lib))
     (library (logical device)
       (uri /usr/local/share/kicad/library/device.lib))
     (library (logical conn)
-      (uri /usr/local/share/kicad/library/conn.lib)))
+      (uri /usr/local/share/kicad/library/conn.lib))
+    (library (logical AbAssort)
+      (uri /home/alan/Development/KiCad/library/AbAssort.lib)))
   (nets
     (net (code 1) (name "Net-(C4-Pad2)")
       (node (ref U1) (pin 3))

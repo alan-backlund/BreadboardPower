@@ -1,7 +1,7 @@
 Reference, Value, Footprint, Datasheet
 U2,LD1117DT33,AB1lib:DPAK,
 U1,LT1617,Housings_SOT-23_SOT-143_TSOT-6:SOT-23-5,
-CON1,Power In,Connect:JACK_ALIM,
+CON1,Power In,AB1lib:DC_PWR_JACK,
 C3,10u,Capacitors_SMD:C_0805_HandSoldering,
 C5,10u,Capacitors_SMD:C_0805_HandSoldering,
 C1,4.7u,Capacitors_SMD:C_1206_HandSoldering,
